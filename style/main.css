@@ -1,0 +1,92 @@
+body {
+    margin: auto;
+}
+
+.logo-nav {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: -13px;
+}
+
+ul {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+}
+
+li a{
+    color: white;
+    display: inline;
+    text-decoration: none;
+    padding: 1rem;
+    float: left;
+    background: transparent;
+}
+
+.bg-home {
+    width: 100%;
+}
+
+.bg-end {
+    width: 80%;
+}
+
+.desk-home {
+    color: white;
+    margin-top: -270px;
+    text-align: center;
+}
+
+button {
+    background: transparent;
+    padding: 10px;
+    color: white;
+    border: solid 1px white;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+.category-items {
+    margin-top: 100px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "desk-container bar-rolling bar-rolling bar-rolling";
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+}
+
+.desk-container {
+    margin: auto;
+    padding: 60px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background-color: rgb(255, 255, 255);
+    grid-area: desk-container;
+}
+
+.scrolling-bar {
+    width: 100%;
+    overflow-x: scroll;
+    grid-area: bar-rolling;
+}
+
+.scrolling-bar::-webkit-scrollbar {
+    display: none;
+}
