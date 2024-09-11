@@ -38,7 +38,7 @@ li a:hover {
 }
 
 .bg-end {
-    width: 80%;
+    width: 60%;
 }
 
 .desk-home {
@@ -103,13 +103,7 @@ li a:hover {
 .ads {
     text-align: center;
     width: 100%;
-}
-
-.btn.cart {
-    text-decoration: none;
-    position: absolute;
-    margin-top: -150px;
-    margin-left: -50px;
+    position: relative;
 }
 
 .add-product {
@@ -118,7 +112,8 @@ li a:hover {
     height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "one one four four"
+    grid-template-areas: "teks teks teks teks"
+                         "one one four four"
                          "two two three five"
                          "two two three six";
     gap: 15px;
@@ -129,9 +124,21 @@ li a:hover {
     height: 100%;
 }
 
+.text-moreproduct {
+    grid-area: teks;
+    text-align: center;
+}
+
 .item.one {
     grid-area: one;
+    position: relative;
+    
 }
+
+.item.one figcaption:hover {
+    bottom: 0;
+}
+
 .item.two {
     grid-area: two;
 }
@@ -148,3 +155,47 @@ li a:hover {
     grid-area: six;
 }
 
+figcaption {
+    position: absolute;
+    bottom: -3;
+    background-color: rgba(0, 0, 0, 0.349);
+    padding: 1rem 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: all 200ms;
+}
+
+.grid-box {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: large;
+    color: white; 
+    text-align: center; 
+    border-radius: 5px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "desk ask"
+                         "desk btn";
+    gap: 30px;
+}
+
+p {
+    border: 1px solid white;
+    padding: 15px
+}
+
+.desk-box {
+    grid-area: desk;
+}
+
+.ask-text {
+    grid-area: ask;
+}
+
+.btn.card {
+    grid-area: btn;
+}
